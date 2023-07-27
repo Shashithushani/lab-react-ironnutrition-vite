@@ -1,8 +1,7 @@
-import { useState } from "react";
 import deleteFood from "/src/App.jsx";
 
 function FoodBox(food) {
-  const { name, calories, image, servings, id } = food;
+  const { name, calories, image, servings } = food;
   const totalCalories = servings * calories;
   return (
     <>

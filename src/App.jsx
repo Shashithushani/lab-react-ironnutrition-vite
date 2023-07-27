@@ -21,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <h1> React IronNutrition</h1>
+      <AddFoods foods={foods} setFoods={setFoods} />
       {foods.map((oneFood) => {
         return (
           <>

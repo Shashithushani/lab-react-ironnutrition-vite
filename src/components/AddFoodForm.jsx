@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-function AddFoods(props) {
+function AddFoods() {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
-  const [calories, setCalories] = useState("");
-  const [servings, setServings] = useState("");
+  const [calories, setCalories] = useState(0);
+  const [servings, setServings] = useState(0);
 
   const handleNameInput = (event) => setName(event.target.value);
 
@@ -18,17 +18,17 @@ function AddFoods(props) {
     event.preventDefault();
     const newFood = { name, image, calories, servings };
 
-    props = newFood;
+    newFood;
     setName("");
     setImage("");
     setCalories("");
     setServings("");
   };
   return (
-    <div calssName="food">
+    <div>
       <h3>Add new Food</h3>
       <form onSubmit={handleSubmit}>
-        <lable>Name</lable>
+        <lable className="lable">Name</lable>
         <input
           name="name"
           type="text"
@@ -36,28 +36,28 @@ function AddFoods(props) {
           onChange={handleNameInput}
         />
 
-        <lable> Image</lable>
+        <lable className="lable"> Image</lable>
         <input
           name="image"
           type="text"
           value={image}
           onChange={handleImageInput}
         />
-        <lable>Calories</lable>
+        <lable className="lable">Calories</lable>
         <input
           name="calories"
           type="number"
           value={calories}
           onChange={handleCaloriesInput}
         />
-        <lable>Servings</lable>
+        <lable className="lable">Servings</lable>
         <input
           name="servings"
           type="number"
           value={servings}
           onChange={handleServingsInput}
         />
-        <button type="submit">Create</button>
+        <button type="submit">Add Food</button>
       </form>
     </div>
   );

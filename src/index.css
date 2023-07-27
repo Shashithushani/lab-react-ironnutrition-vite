@@ -60,6 +60,10 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+.lable {
+  color: #1a1a1a;
+  background-color: #90999d5f;
+}
 button:hover {
   border-color: #646cff;
 }
